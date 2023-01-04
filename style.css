@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background: #758190;
+    background: linear-gradient(0deg, rgba(113,130,146,1) 0%, rgba(172,175,188,1) 30%);
 }
 
 #tentacles {
@@ -11,7 +16,10 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background: rgb(78,164,196);
+    background: linear-gradient(0deg, rgba(78,164,196,1) 0%, rgba(173,216,230,1) 45%);
+    box-shadow: 0px 0px 7px;
+    justify-content: flex-end;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,21 +27,99 @@ body {
     margin-top: -10px;
 }
 
+.website-logo {
+    display: flex;
+    margin-right: auto;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin-right: 2rem;
+    font-size: 24px;
+}
+
+.nav-item a {
+    color: black;
+}
+
+.welcome-image {
+    margin-top: 1%;
+    background-image: url("./assets/bao-truong-hYrnz92-bpY-unsplash.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    border-radius: 6px;
+    margin-bottom: 3%;
+}
+
+#welcome-text {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    background-color: rgba(69, 69, 69, 0.8);
+    border-radius: 6px;
+    color: white;
+    transform: translate(-50%, -25%);
+    padding: 0px 30px;
+    font-size: 40px;
+}
+
+#description-container {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    margin: auto;
+    width: 60%;
+    background-color: rgba(69, 69, 69, 0.8);
+    border-radius: 6px;
+    color: white;
+    padding: 0px 5px;
+    font-size: 18px;
+}
+
+.section-header {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+    background: rgb(69,69,69);
+    background: linear-gradient(0deg, rgba(69,69,69,1) 0%, rgba(98,98,98,1) 100%);
+    color: white;
+    padding: 10px 0px;
+}
+
 .stats-container {
     display: flex;
+    align-items: flex-start;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #e1e2e1;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    box-shadow: 5px 5px 10px #718292;
 }
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+}
+
+#ourGames-description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 #games-container {
@@ -62,6 +148,12 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
+/*My class: pledge text in the games card */
+.games-card-pledge-text {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #button-container {
     text-align: center;
 }
@@ -72,4 +164,9 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    box-shadow: 5px 5px 10px #718292;
+}
+
+button:hover {
+    cursor: pointer;
 }
